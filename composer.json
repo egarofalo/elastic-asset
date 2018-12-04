@@ -1,0 +1,27 @@
+{
+    "name": "co-developers/elastic-asset",
+    "type": "library",
+    "license": "MIT",
+    "description": "Elastic Asset Component",
+    "homepage": "http://co-developers.com",
+    "authors": [
+        {
+            "name": "Edgardo Garofalo",
+            "email": "egarofalo83@gmail.com",
+            "homepage": "https://github.com/egarofalo",
+            "role": "Developer"
+        }
+    ],
+    "keywords": [
+        "wordpress", "co-developers", "starter theme", "wordpress starter theme", "asset"
+    ],
+    "require": {
+        "php": "^7.1",
+        "symfony/asset": "^4.2.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "CoDevelopers\\Elastic\\Component\\": ""
+        }
+    }
+}

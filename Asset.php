@@ -13,9 +13,9 @@ class Asset extends Package
     {
         parent::__construct(new JsonManifestVersionStrategy($manifestPath));
     }
-    
+
     public function get(string $filename): string
     {
-        return $this->getUrl($filename);
+        return function_exists('home_url') ? home_url($this->getUrl($filename)) : $this->getUrl($filename);
     }
 }

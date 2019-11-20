@@ -3,6 +3,7 @@
 namespace CoDevelopers\WpAsset;
 
 use Symfony\Component\Asset\Package;
+use Symfony\Component\Asset\VersionStrategy\StaticVersionStrategy;
 use Symfony\Component\Asset\VersionStrategy\JsonManifestVersionStrategy;
 use Symfony\Component\Asset\VersionStrategy\EmptyVersionStrategy;
 
@@ -16,15 +17,14 @@ class WpAsset extends Package
     {
         switch ($strategy) {
             case self::STATIC_VERSION_STRATEGY:
-                parent::__construct(new StaticVersionStrategy($params['version']));
+                parent::__construct(new StaticVersionStrategy($params[0]));
                 break;
             case self::JSON_MANIFEST_VERSION_STRATEGY:
-                parent::__construct(new JsonManifestVersionStrategy($params['jsonManifestPath']));
+                parent::__construct(new JsonManifestVersionStrategy($params[0]));
                 break;
             default:
                 parent::__construct(new EmptyVersionStrategy());
                 break;
-                
         }
     }
 

@@ -1,9 +1,9 @@
 {
-    "name": "co-developers/elastic-asset",
+    "name": "co-developers/wp-asset",
     "type": "library",
     "license": "MIT",
-    "description": "Elastic Asset Component",
-    "homepage": "http://co-developers.com",
+    "description": "Symfony Asset Component implementation for WordPress.",
+    "homepage": "https://co-developers.com",
     "authors": [
         {
             "name": "Edgardo Garofalo",
@@ -13,15 +13,18 @@
         }
     ],
     "keywords": [
-        "wordpress", "co-developers", "starter theme", "wordpress starter theme", "asset"
+        "wordpress",
+        "co-developers",
+        "asset",
+        "symfony"
     ],
     "require": {
-        "php": "^7.1",
-        "symfony/asset": "^4.2.0"
+        "php": "^7.1.3",
+        "symfony/asset": "^4.3.8"
     },
     "autoload": {
         "psr-4": {
-            "CoDevelopers\\Elastic\\Component\\": ""
+            "CoDevelopers\\WpAsset\\": ""
         }
     }
 }

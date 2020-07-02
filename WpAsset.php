@@ -43,6 +43,6 @@ class WpAsset extends Package
 
     public function get(string $filename): string
     {
-        return get_template_directory_uri() . $this->publicPath . ltrim($this->getUrl($filename), '/');
+        return get_stylesheet_directory_uri() . $this->publicPath . ltrim($this->getUrl($filename), '/');
     }
 }
